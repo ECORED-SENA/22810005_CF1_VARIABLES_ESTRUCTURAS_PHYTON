@@ -1,0 +1,90 @@
+.container#tema_1
+
+    .header-ecored
+      h1 1. Proceso de instalación de Python  
+
+    .jumbotron.bg-white  
+      .row.justify-content-center
+        .col-12
+          .card.card-bg-color
+            .card-body.mb-0
+              .row
+                .col-auto
+                  .nav.flex-column.nav-pills#v-pills-tab(role="tablist", aria-orientation="vertical")
+                    a.text-center.nav-link.active#v-pills-1-tab(data-toggle="pill", href="#v-pills-1", role="tab", aria-controls="v-pills-1", aria-selected="true") Paso 1
+                    a.text-center.nav-link#v-pills-2-tab(data-toggle="pill", href="#v-pills-2", role="tab", aria-controls="v-pills-2", aria-selected="false") Paso 2
+                    a.text-center.nav-link#v-pills-3-tab(data-toggle="pill", href="#v-pills-3", role="tab", aria-controls="v-pills-3", aria-selected="false") Paso 3
+                    a.text-center.nav-link#v-pills-4-tab(data-toggle="pill", href="#v-pills-4", role="tab", aria-controls="v-pills-", aria-selected="false") Paso 4
+                    
+                .col
+                  .tab-content#v-pills-tabContent
+                    .tab-pane.fade.show.active#v-pills-1(role="tabpanel", aria-labelledby="v-pills-1-tab")
+                      img(src="assets/images/pages/tema_1/tabs_01.png", alt="", style="width:100%")
+                      .jumbotron.bg-white.mt-3.mb-0
+                        p.mb-0 Para realizar el proceso de instalación es necesario ir al sitio oficial de Python (#[a(href="http://www.python.org", target="_blank") http://www.python.org)] y descargar el instalador ejecutable en el menú superior: la opción #[i Downloads.]                 
+                    .tab-pane.fade#v-pills-2(role="tabpanel", aria-labelledby="v-pills-2-tab")
+                      img(src="assets/images/pages/tema_1/tabs_02.png", alt="", style="width:100%")
+                      .jumbotron.bg-white.mt-3.mb-0
+                        p.mb-0 Una vez descargado, iniciar la instalación ejecutando el archivo con doble clic.
+                      
+                    .tab-pane.fade#v-pills-3(role="tabpanel", aria-labelledby="v-pills-3-tab")
+                      img(src="assets/images/pages/tema_1/tabs_03.png", alt="", style="width:100%")
+                      .jumbotron.bg-white.mt-3.mb-0
+                        p.mb-0 Para comprobar Python, acceder a la línea de comandos de Windows, ejecutando el programa cmd.exe 
+                    .tab-pane.fade#v-pills-4(role="tabpanel", aria-labelledby="v-pills-4-tab")
+                      img(src="assets/images/pages/tema_1/tabs_04.png", alt="", style="width:100%")
+                      .jumbotron.bg-white.mt-3.mb-0
+                        p.mb-0 Después, escribir "python" y ENTER para iniciar el entorno interactivo de Python e introducir comandos. Salir con el comando quit() o CTRL-Z.          
+    .jumbotron.bg-white
+      .row
+        .col-12
+          .header-ecored.mt-3#tema1_1
+            h2 1.1 Comentarios en Python 
+
+      .row.justify-content-center.mb-5
+        .col-12.mb-5
+          p Un comentario es una línea de texto no ejecutable, esto quiere decir que el compilador o intérprete no la tomará como una línea de código.
+
+          p Es una buena práctica en programación documentar el código para mayor claridad en un proyecto. Se pueden hacer comentarios en Python para dar pequeñas explicaciones acerca de lo que hace el programa. Se pueden usar tantos comentarios como sean necesarios. 
+
+          p.mt-5 Hay dos formas para hacer comentarios:
+          
+          .list
+            .list__item
+              .list__item__bulletNumber
+                span 1     
+            .list__txt
+              p Digitando el símbolo # al comienzo del comentario. 
+          .list
+            .list__item
+              .list__item__bulletNumber
+                span 2  
+            .list__txt
+              p Digitando triple comilla (“) al principio y al final del comentario, cuando ocupan varias líneas.
+        .col-12
+          .console
+            p Ejemplo
+            p.cl-gray # Autor: Pepito Pérez
+            p.cl-gray # Ciudad: Bogotá
+            p.cl-gray >>> x=0
+            p.cl-gray >>> y=8 # Los omentarios también pueden estar dentro de una línea
+            p.cl-gray """ Este es un comentario multilínea.<br>Podemos escribir varias líneas sucesivamente en la documentación"""
+
+    .jumbotron.bg-white
+      .row
+        .col-12
+          .header-ecored.mt-3#tema1_2
+            h2 1.2 Errores de tecleo y excepciones
+
+      .row
+        .col-12
+          p Si se digita incorrectamente una expresión, Python nos lo indicará con un mensaje de error. El mensaje de error proporciona información acerca del tipo de error cometido y del lugar en el que éste ha sido detectado. 
+        .col-12.my-5
+          .console
+            p Ejemplo
+            p.cl-gray >>> 1+2
+            p.cl-gray File #{'"<stdin>"'}, line 1 </br> 1 + 2)</br> ^
+            p.cl-gray SyntaxError: unmatched ')'
+        .col-12
+          p En este ejemplo se ha cerrado un paréntesis cuando no había otro abierto previamente, lo cual es incorrecto. Python indica que ha detectado un error de sintaxis (SyntaxError) y señala con el carácter ^ al lugar en el que se encuentra.
+          p En Python los errores se denominan excepciones. Cuando Python es incapaz de analizar una expresión, produce una excepción. Cuando el intérprete interactivo detecta la excepción, nos muestra por pantalla un mensaje de error.

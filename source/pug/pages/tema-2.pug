@@ -1,0 +1,557 @@
+.container#tema_2
+
+    .header-ecored
+        h1 2. Tipos de datos 
+
+    .jumbotron.bg-white 
+      .row.justify-content-center
+        .col-12.col-lg-7.my-5
+          img(src="assets/images/pages/tema_2/img_2_01.svg", alt="", style="width:100%")       
+        .col-12
+          p En Python se encuentran diferentes tipos de datos con sus respectivas características y clasificaciones. A continuación se detallarán los tipos de datos básicos y otros tipos de datos predefinidos por el lenguaje.
+          
+          p.mt-5 Arias (2019) se refiere a los siguientes tipos de datos básicos de Python: 
+          .list
+            .list__item
+              .list__item__icon
+                img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+            .list__txt
+              p #[strong Numéricos]
+          .list
+            .list__item
+              .list__item__icon
+                img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+            .list__txt
+              p #[strong Booleanos]
+          .list
+            .list__item
+              .list__item__icon
+                img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+            .list__txt
+              p #[strong Cadenas de caracteres] 
+
+          p.mt-3 Python también define otros tipos de datos, entre los que se encuentran:
+
+          .list
+            .list__item
+              .list__item__icon
+                img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+            .list__txt
+              p #[strong Secuencias:] list, tuple y range
+          .list
+            .list__item
+              .list__item__icon
+                img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+            .list__txt
+              p #[strong Conjuntos:] set
+          .list
+            .list__item
+              .list__item__icon
+                img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+            .list__txt
+              p #[strong Mapas:] dict    
+
+    .jumbotron.bg-white     
+      .row
+        .col-12
+          .header-ecored.mt-3#tema2_1
+            h2 2.1 Conceptos: datos numéricos, booleanos, cadena de caracteres, otros tipos de datos
+
+      .jumbotron.img_texture
+        .row.justify-content-center             
+          .col-12
+            .jumbotron.bg-white
+              .list
+                .list__item
+                  .list__item__bulletNumber
+                    span A
+                .list__txt
+                  h3 Datos numéricos
+                  p Python define tres tipos de datos numéricos: enteros, punto flotante y números complejos.
+                  .list.mt-5
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_duoble_chevron.svg", alt="")
+                    .list__txt
+                      h3 Números enteros
+                      p Se denominan #[strong #[i int]]. Este tipo de dato comprende el conjunto de todos los números enteros, cuyo límite depende de la capacidad de memoria del computador. 
+                      p Un número de tipo #[strong #[i int]] se crea a partir de un literal que represente un número entero, o como resultado de una expresión o como una llamada a una función.
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo
+                      p.cl-gray # v es de tipo int y su valor asignado es -3
+                      p.cl-green >>> v = -3  
+                      p.cl-gray # m es de tipo int y su valor calculado es 5
+                      p.cl-green >>> m = v + 8   
+                      p.cl-green >>>print (m)
+                      p 5
+                      p.cl-gray # z es de tipo int y con la función redondeo es 2
+                      p.cl-green >>> z = round(m/2)   
+                      p.cl-green >>> print(z)
+                      p 2
+                  .col-12
+                    p También se pueden representar los números enteros en formato binario, octal o hexadecimal.
+                    .list
+                      .list__item
+                        .list__item__icon
+                          img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                      .list__txt
+                        p Para crear un número entero en binario, se antepone 0b a una secuencia de dígitos 0 y 1.
+                    .list
+                      .list__item
+                        .list__item__icon
+                          img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                      .list__txt
+                        p Para crear un número entero en octal, se antepone 0o a una secuencia de dígitos del 0 al 7.
+                    .list
+                      .list__item
+                        .list__item__icon
+                          img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                      .list__txt
+                        p Para crear un número entero en hexadecimal, se antepone 0x a una secuencia de dígitos del 0 al 9 y de la A la F.
+                  .col-12.my-4
+                    .console
+                      p Ejemplo
+                      p.cl-green >>> decimal = 8
+                      p.cl-green >>> binario = 0b1101
+                      p.cl-green >>> octal = 0o11
+                      p.cl-green >>> hexadecimal = 0xc
+                      p.cl-green >>> print(decimal)
+                      p 8
+                      p.cl-green >>> print(binario)
+                      p 13
+                      p.cl-green >>> print(octal)
+                      p 9
+                      p.cl-green >>> print(hexadecimal)
+                      p 12  
+
+                  .hr-divider.my-5
+                  
+                  .list.mt-5
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_duoble_chevron.svg", alt="")
+                    .list__txt
+                      h3 Números de punto flotante
+                      p Se denominan #[strong #[i float]]. Se usa el tipo #[strong #[i float]] para representar cualquier número real que represente valores de temperaturas, velocidades, estaturas y otras. 
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo                      
+                      p.cl-green >>> real = 1.1 + 2.2 #[span.inline_comment # real es un float]
+                      p.cl-green >>> print(real)
+                      p 3.3000000000000003 #[span.inline_comment # representación aproximada de 3.3] 
+                      p.cl-green >>> print(round(real,1))
+                      p 3.3 #[span.inline_comment # real mostrando únicamente 1 cifra decimal] 
+
+                  .hr-divider.my-5
+
+                  .list.mt-5
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_duoble_chevron.svg", alt="")
+                    .list__txt
+                      h3 Números complejos
+                      p Este tipo de datos en Python se denomina #[strong #[i complex]].
+                      p Los números complejos tienen una parte real y otra imaginaria y cada una de ellas se representa como un #[strong #[i float]]. Los números imaginarios son múltiplos de la unidad imaginaria (la raíz cuadrada de -1). 
+                      .list
+                        .list__item
+                          .list__item__icon
+                            img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                        .list__txt
+                          p Para definir un número complejo, se hace así:
+                          .row
+                            .col-auto
+                              .jumbotron.mb-0
+                                p.mb-0 #[strong #{'<parte_real>'} + #{'<parte_imaginaria>'} j]  
+                          p.mt-4 #[strong Ejemplo:] 4 + 7j
+                      .list
+                        .list__item
+                          .list__item__icon
+                            img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                        .list__txt
+                          p Para acceder a la parte real se usa el atributo real.
+                      .list
+                        .list__item
+                          .list__item__icon
+                            img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                        .list__txt
+                          p Para acceder a la parte imaginaria se usa el atributo #[i imag].
+
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo                      
+                      p.cl-green >>> complejo = 5+3j
+                      p.cl-green >>> complejo.real
+                      p 5.0 
+                      p.cl-green >>> complejo.imag
+                      p.mb-0 3.0
+                  .col-12
+                    p.text-center Para tener acceso a los equivalentes complejos del módulo math, se debe usar cmath.
+
+                  .hr-divider.my-5
+
+                  .list.mt-5
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_duoble_chevron.svg", alt="")
+                    .list__txt
+                      h3 Aritmética de los tipos numéricos
+                      p Para todos los tipos numéricos se pueden aplicar las operaciones: suma, resta, producto o división.  Para exponentes se usa ** y para la división entera se usa //.
+                      p Se permite realizar una operación aritmética con números de distinto tipo. En este caso, el tipo numérico “más pequeño” se convierte al del tipo “más grande”, de forma que el tipo del resultado siempre es el del tipo mayor. 
+                      .list
+                        .list__item
+                          .list__item__icon
+                            img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                        .list__txt
+                          p El tipo int es menor que el tipo float, el tipo float es menor que el tipo complex.
+                      .list
+                        .list__item
+                          .list__item__icon
+                            img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                        .list__txt
+                          p Si vamos a sumar un int y un float, el resultado es un float.
+                      .list
+                        .list__item
+                          .list__item__icon
+                            img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                        .list__txt
+                          p Si vamos a sumar un int y un complex, el resultado es un complex.
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo                      
+                      p.cl-green >>> x = 2
+                      p.cl-green >>> a = x**3 #[span.inline_comment # a es 8 elevado a la 3]
+                      p.cl-green >>>print(a)
+                      p 8
+                      p.cl-green >>> b = 31
+                      p.cl-green >>> c = b//4 #[span.inline_comment # c es la parte entera de dividir b entre 4]    
+                      p.cl-green >>> print(c)
+                      p 7
+                      p.cl-green >>> g = 31.0
+                      p.cl-green >>> h = d/4 #[span.inline_comment # h es la parte entera de dividir g entre 4]    
+                      p.cl-green >>>print(h)
+                      p 7.0
+                      p.cl-green >>> 1 + 2.0
+                      p 3.0
+                      p.cl-green >>> 2+3j + 5.7
+                      p.mb-0 (7.7+3j)  
+                      
+      .hr-divider.my-5
+
+      .jumbotron.img_texture
+        .row.justify-content-center             
+          .col-12
+            .jumbotron.bg-white
+              .list
+                .list__item
+                  .list__item__bulletNumber
+                    span B
+                .list__txt
+                  h3 Datos numéricos
+                  p En Python se representan los valores booleanos con #[strong #[i bool]]. Esta clase solo se puede instanciar con dos valores: True para verdadero y False para falso.
+                  p Una particularidad del lenguaje es que cualquier variable puede ser usada en un contexto donde se requiera comprobar si algo es verdadero o falso. 
+                  p Los siguientes objetos/instancias son consideradas falsas:
+                  .list
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                    .list__txt
+                      p None
+                  .list
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                    .list__txt
+                      p False
+                  .list
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                    .list__txt
+                      p El valor cero de cualquier tipo númerico: 0, 0.0, 0j
+                  .list
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                    .list__txt
+                      p Secuencias y colecciones vacías: '', (), [], {}, set(), range(0)
+
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo                      
+                      p.cl-green >>> a = False
+                      p.cl-green >>> b = True
+                      p.cl-green >>> Type(a)
+                      p.cl-green #{'<class'} &#39; bool &#39; #{'>'}    
+                      p.cl-green >>> print(a)
+                      p false
+                      p.cl-green >>> print(b)
+                      p True
+                      p.cl-green >>> c = None
+                      p.cl-green >>> print(c)
+                      p None
+                      p.cl-green >>> type(c)                      
+                      p.cl-green #{'<class'} &#39; NoneType &#39; #{'>'}           
+
+      .hr-divider.my-5      
+
+      .jumbotron.img_texture
+        .row.justify-content-center             
+          .col-12
+            .jumbotron.bg-white
+              .list
+                .list__item
+                  .list__item__bulletNumber
+                    span C
+                .list__txt
+                  h3 Datos tipo cadena de caracteres
+                  p Salazar (2019) denomina este tipo de dato como #[i string]. Para crear un #[i string], se deben encerrar entre comillas simples o dobles una secuencia de caracteres.
+                  p En Python las cadenas de caracteres se representan con #[strong #[i str]]. 
+                  p Se puede usar comillas simples o dobles. Si en la cadena de caracteres se necesita usar una comilla simple, existen dos opciones: usar comillas dobles para encerrar el #[i string], o bien, usar comillas simples, pero anteponer el carácter \ a la comilla simple del interior de la cadena. 
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo                      
+                      p.cl-green >>> saludo1 = 'Hola "María"'
+                      p.cl-green >>> type(saludo1)                      
+                      p.cl-green #{'<class'} &#39; str &#39; #{'>'}    
+                      p.cl-green >>> saludo2 = 'Hola \'María\' '
+                      p.cl-green >>> saludo3 = "Hola 'María' "
+                      p.cl-green >>> print(saludo1)
+                      p Hola "María"
+                      p.cl-green >>> print(saludo3)
+                      p.mb-0 Hola 'María'
+                  p A diferencia de otros lenguajes, en Python no existe el tipo «caracter». Pero se puede simular con un #[i string] de un solo caracter:
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo                      
+                      p.cl-green >>> caracter1 = 'z'
+                      p.cl-green >>> print(caracter1)                     
+                      p.mb-0 z
+
+      .hr-divider.my-5
+
+      .jumbotron.img_texture
+        .row.justify-content-center             
+          .col-12
+            .jumbotron.bg-white
+              .list
+                .list__item
+                  .list__item__bulletNumber
+                    span D
+                .list__txt
+                  h3 Otros tipos de datos
+                  p Adicional a los tipos básicos, se encuentran otros tipos fundamentales de Python denominados secuencias #[i (list y tuple)], los conjuntos #[i (set)] y los mapas #[i (dict)]. 
+                  p.mb-5 Pérez (2016) aclara que todos ellos son tipos de datos compuestos y se utilizan para agrupar valores del mismo o diferente tipo.
+                  .list
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                    .list__txt
+                      p #[strong Las listas] son arreglos unidimensionales de elementos donde podemos ingresar cualquier tipo de dato, para acceder a estos datos debemos usar un índice. La posición inicial es la posición 0.
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo                      
+                      p.cl-green >>> lista = [3, 4.2, 'SENA', [8,9] ,5] #[span.inline_comment # lista contiene int, real, cadena, list, int]  
+                      p.cl-green >>> print lista[0] #[span.inline_comment # la posición 0 de la lista contiene el valor 3] 
+                      p.cl-green >>> print lista[1] #[span.inline_comment # la posición 1 de la lista contiene el valor 4.2] 
+                      p.cl-green >>> print lista[2] #[span.inline_comment # la posición 2 de la lista contiene la cadena 'SENA'] 
+                      p.cl-green >>> print lista[3] #[span.inline_comment # la posición 3 de la lista contiene la lista &lsqb;8,9&rsqb;] 
+                      p.cl-green >>> print lista[4] #[span.inline_comment #	la posición 4 de la lista contiene el valor 5] 
+                      p.cl-green >>> print lista[3][0] #[span.inline_comment # la posición 3,0 de la lista contiene 8] 
+                      p.cl-green >>> print lista[3][1] #[span.inline_comment # la posición 3,1 de la lista contiene 9] 
+                      p.cl-green >>> print lista[1:3] #[span.inline_comment # las posiciones de la 1 a la 3 contienen &lsqb;4.2, 'SENA'&rsqb;] 
+                      p.cl-green >>> print lista[1:4] #[span.inline_comment # las posiciones de la 1 a la 4 contienen &lsqb;4.2, 'SENA', &lsqb;8, 9&rsqb;] 
+                      p.cl-green >>> print lista[1:5] #[span.inline_comment # las posiciones de la 1 a la 5 contienen &lsqb;4.2, 'SENA', &lsqb;8, 9 &rsqb;,5 &rsqb;] 
+
+                  .hr-divider.my-5
+
+                  .list
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                    .list__txt
+                      p #[strong Las tuplas] se representan escribiendo los elementos entre paréntesis y separados por comas. La función len() devuelve el número de elementos de una tupla. Una tupla puede no contener ningún elemento, es decir, puede ser una tupla vacía. Una tupla puede incluir un único elemento seguido de una coma.
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo                      
+                      p.cl-green >>> tupla= (8, "b", 4.91)    
+                      p.cl-green >>> tupla    
+                      p (8, 'b', 4.91)
+                      p.cl-green >>> len(tupla)
+                      p 3
+                      p.cl-green >>> len(())
+                      p 0
+                      p.cl-green >>> (3,)
+                      p (3,)
+                      p.cl-green >>> len((3,))
+                      p 1
+
+                  .hr-divider.my-5
+
+                  .list
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                    .list__txt
+                      p #[strong Los conjuntos] son una colección no ordenada y sin elementos repetidos.  Se definen con la palabra set, seguida de llaves que contienen los elementos separados por comas. Si se desea remover un elemento de un conjunto, se puede usar el método #[i remove()].
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo                      
+                      p.cl-green >>> frutas = set([ 'mango', 'pera', 'manzana', 'limón' ])   
+                      p.cl-green >>> frutas  
+                      p {'mango', 'manzana', 'pera', 'limón'}
+                      p.cl-green >>> frutas.remove('manzana')
+                      p.cl-green >>> frutas
+                      p {'mango', 'pera', 'limón'}
+                     
+                  .hr-divider.my-5
+
+                  .list
+                    .list__item
+                      .list__item__icon
+                        img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+                    .list__txt
+                      p #[strong Los diccionarios] son un tipo de estructuras de datos que permiten guardar un conjunto no ordenado de pares clave-valor, existiendo las claves únicas dentro de un mismo diccionario (es decir, que no pueden tener dos elementos con una misma clave).  El diccionario se declara entre los caracteres '{ }' y los elementos se separan por comas (','). 
+                      p Los diccionarios denominados #[strong #[i dict]] para Python, son estructuras de datos muy extendidos en otros lenguajes de programación, aunque en otros lenguajes como java se les denominan con distintos nombres como #[i "Map"].
+
+                  .col-12.my-4
+                    .console
+                      p.cl-gray # Ejemplo                      
+                      p.cl-gray # Defino la variable 'futbolistas' como un diccionario. 
+                      p.cl-green futbolistas = dict()
+                      p.cl-green.mb-0 futbolistas = {
+                      p.cl-green.mb-0 13 : "Mina", 21 : "Lucumi",
+                      p.cl-green.mb-0 17 : "Fabra", 11 : "Cuadrado",
+                      p.cl-green.mb-0 9 : "Falcao", 19 : "Muriel",
+                      p.cl-green.mb-0 15 : "Uribe", 10 : "James Rodriguez",
+                      p.cl-green.mb-0 16 : "Lerma", 5 : "Wilmar Barrios",
+                      p.cl-green.mb-0 3 : "Murillo"
+                      p.cl-green.mb-0 }
+                      p.cl-green >>> futbolistas
+                      p {13: 'Mina', 21: 'Lucumi', 17: 'Fabra', 11: 'Cuadrado', 9: 'Falcao', 19: 'Muriel', 15: 'Uribe', 10: 'James Rodriguez', 16: 'Lerma', 5: 'Wilmar Barrios', 3: 'Murillo'}
+                      p.cl-green >>> futbolistas[9]
+                      p.mb-0 'Falcao' 
+
+                  .col-12.my-4
+                    p.mb-5 Ejemplo completo de listas, tupla, conjunto y diccionario:
+                    .console
+                      p.cl-gray # Ejemplo                   
+                      p.cl-green >>> lista = [1, 2, 3, 8, 9]
+                      p.cl-green >>> tupla = (1, 4, 8, 0, 5)
+                      p.cl-green >>> n=len(tupla)
+                      p.cl-green >>> conjunto = set([1, 3, 1, 4])
+                      p.cl-green >>> diccionario = {'a': 1, 'b': 3, 'z': 8}
+                      p.cl-green >>> print(lista)
+                      p [1, 2, 3, 8, 9]
+                      p.cl-green >>> print(tupla)
+                      p (1, 4, 8, 0, 5)
+                      p.cl-green >>> print(“Longitud de la tupla= “,n)
+                      p Longitud de la tupla= 5
+                      p.cl-green >>> print(conjunto)
+                      p {1, 3, 4}
+                      p.cl-green >>> print(diccionario)
+                      p {'a': 1, 'b': 3, 'z': 8}
+
+    .jumbotron.bg-white     
+      .row
+        .col-12
+          .header-ecored.mt-3#tema2_2
+            h2 2.2 Identificar el tipo de variable 
+
+      .row
+        .col-12
+          p.mb-5 Guzdial (2013) afirma que existen dos funciones en Python para determinar el tipo de dato que contiene una variable: type() e isinstance():
+          .row
+            .col-auto
+              .jumbotron
+                p.mb-2 #[strong #[i type()]]
+                p.mb-0 Recibe como parámetro un objeto y devuelve el tipo del mismo.
+          .row
+            .col-auto
+              .jumbotron.mb-0
+                p.mb-2 #[strong #[i isinstance()]]
+                p.mb-0 Recibe dos parámetros: un objeto y un tipo. Devuelve True si el objeto es del tipo que se pasa como parámetro y False en caso contrario.
+
+        .col-12.my-4          
+          .console
+            p.cl-gray # Ejemplo
+            p.cl-green >>> type(5)
+            p.cl-green #{"<class 'int'>"}
+            p.cl-green >>> type(3.14)
+            p.cl-green #{"<class 'float'>"} 
+            p.cl-green >>> type('Hola mundo')
+            p.cl-green #{"<class 'str'>"} 
+            p.cl-green >>> isinstance(7, float) 
+            p False
+            p.cl-green >>> isinstance(8, int)
+            p True
+            p.cl-green >>> isinstance(2, bool)
+            p False
+            p.cl-green >>> isinstance(False, bool)
+            p True
+
+    .jumbotron.bg-white     
+      .row
+        .col-12
+          .header-ecored.mt-3#tema2_3
+            h2 2.3 Conversión de tipos de datos   
+
+      .row
+        .col-12
+          p.mb-5 En algunos casos se requiere convertir el tipo de datos a otro que sea más adecuado. Por ejemplo, si una cadena contiene el valor “10” para poderlo sumar a otra variable tipo entero, se debe convertir la cadena en un dato tipo entero.  
+          p Según Cuevas (2017), Python ofrece las siguientes funciones:
+          .list
+            .list__item
+              .list__item__icon
+                img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+            .list__txt
+              p #[strong str():] devuelve la representación en cadena de caracteres del objeto que se pasa como parámetro.
+          .list
+            .list__item
+              .list__item__icon
+                img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+            .list__txt
+              p #[strong int():] devuelve un int a partir de un número o secuencia de caracteres.
+          .list
+            .list__item
+              .list__item__icon
+                img(src="assets/images/icons/icon_single_chevron.svg", alt="")
+            .list__txt
+              p #[strong #[i float():]] devuelve un #[i float] a partir de un número o secuencia de caracteres.
+
+      .row.mt-5        
+        .col-12
+          .jumbotron
+            .row.align-items-center 
+              .col-auto
+                img(src="assets/images/pages/tema_2/icon_2_01.svg", alt="", style="width:150px")
+              .col
+                p.mb-2 #[strong NOTA]
+                .hr-divider(style="background-color:#AEBDD3 !important").mb-3
+                p Si a las funciones anteriores se les pasa como parámetro un valor inválido, el intérprete mostrará un error.
+
+        .col-12.my-4          
+          .console
+            p.cl-gray # Ejemplo
+            p.cl-green >>> edad=”25” 
+            p.cl-green >>> edad = int(edad) + 10  #[span.inline_comment # Convierte edad a int]    
+            p.cl-green >>> edad  #[span.inline_comment # edad es un int] 
+            p 35  
+            
+            p.cl-green >>> edad = str(edad) #[span.inline_comment # Convierte edad a str]    
+            p.cl-green >>> edad  #[span.inline_comment # edad es un str (se muestran las '')] 
+            p '35'  
+
+            p.cl-green >>> loat('18.66') #[span.inline_comment # Convierte un str a float]                
+            p 18.66
+
+            p.cl-green >>> float('hola') #[span.inline_comment # Convierte un str a float (pero no es válido)] 
+
+            p Traceback (most recent call last):
+            p File &ldquo;#{"<input>"}&rdquo; , line 1, in #{"<module>"}
+            p ValueError: could not convert string to float: 'hola' 
+
+
+
+                      
+                      
